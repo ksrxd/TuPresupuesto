@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de movimientos - TuPrespuesto</title>
+    <link href="static/css/hojadeestilogeneral.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div>
+    <img class="logo" src="static/img/logo.png"/>
+</div>
+<nav>
+  <ul>
+    <li><a href="inicio">Inicio</a></li>
+    <li><a href="movimientos">Ingresar Movimientos</a></li>
+    <li><a href="ver_movimientos">Ver Movimientos</a></li>
+    <li><a href="#">Informacion acerca del proyecto</a></li>
+  </ul>
+</nav>
+<div class="ingresoderegistros">
+    <form action="" method="post" autocomplete="off">
+        <input type="date"
+            id="fecha"
+            class=""
+            name="Fecha"
+            placeholder="Fecha"
+            value="{{request.form.movimientos}}">
+        <select id="TipoMovimiento" name="TipoMovimiento">
+            <option disabled selected>Selecciona el tipo de movimiento</option>
+            <option value="Ingreso">Ingreso</option>
+            <option value="Gasto">Gasto</option>
+        </select>
+        <input type="text"
+            id="Categoria"
+            class=""
+            name="Categoria"
+            placeholder="Categoria"
+            value="{{request.form.movimientos}}">
+        <input type="text"
+            id="Concepto"
+            class=""
+            name="Concepto"
+            placeholder="Concepto"
+            value="{{request.form.movimientos}}">
+        <input type="text"
+            id="Monto"
+            class=""
+            name="Monto"
+            placeholder="Monto"
+            value="{{request.form.movimientos}}">
+        <input type="submit" value="Registrar movimiento">
+    </form>
+</div>
+</body>
+</html>
