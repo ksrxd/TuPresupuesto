@@ -1,3 +1,5 @@
+import json
+from flask import jsonify
 import requests
 
 from web.servicios import rest_api
@@ -12,8 +14,18 @@ def ingresar_movimientos(Fecha, TipoMovimiento, Concepto, Categoria, Monto):
     respuesta = requests.post(f'{rest_api.API_URL}/movimientos', json=body)
     return respuesta.status_code == 200
 
-# obtener movimeintos
+# obtener movimientos
 
 def obtener_movimientos():
     respuesta = requests.get(f'{rest_api.API_URL}/movimientos')
     return respuesta.json()
+
+#obtener movimientos por <tipo>
+
+def obtener_movimiento_tipomovimientoingreso():
+    respuestatipomoviingreso = requests.get(f'{rest_api.API_URL}/movimientos/Ingreso')
+    return respuestatipomoviingreso.json()
+
+def obtener_movimiento_tipomovimientogasto():
+    respuestatipomovigasto = requests.get(f'{rest_api.API_URL}/movimientos/Gasto')
+    return respuestatipomovigasto.json()

@@ -1,9 +1,11 @@
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, redirect, json, url_for
 from flask import render_template
 from web.servicios import autenticacion
 from web.servicios import movimientos
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/')
@@ -37,6 +39,10 @@ def inicio():
     usuarios = autenticacion.obtener_usuarios()
     return render_template('inicio.html', usuarios=usuarios)
 
+@app.route('/acercade')
+def acercade():
+    return render_template('acercade.html')
+
 @app.route('/movimientos', methods=['GET', 'POST'])
 def ingresar_movimientos():
     error = None
@@ -51,8 +57,17 @@ def ingresar_movimientos():
 def ver_movimientos():
     obtenermovi = movimientos.obtener_movimientos()
     return render_template('ver_movimientos.html', movimientos = obtenermovi)
+@app.route('/ver_movimientos', methods=['GET'])
+def obtener_moviportipoingreso():
+    obtenermoviportipoingreso = movimientos.obtener_movimiento_tipomovimientoingreso()
+    return render_template('ver_movimientos.html', movimientos = obtenermoviportipoingreso)
+@app.route('/ver_movimientos', methods=['GET'])
+def obtener_moviportipogasto():
+    obtenermoviportipogasto = movimientos.obtener_movimiento_tipomovimientogasto()
+    return render_template('ver_movimientos.html', movimientos = obtenermoviportipogasto)
 
 
 if __name__ == '__main__':
     app.debug = True
     app.run(port=5002)
+
