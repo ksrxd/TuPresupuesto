@@ -1,7 +1,7 @@
 import sqlite3
 
 class BaseDeDatos:
-    url_base_de_datos = 'C:/Users/Pc/Desktop/Estudios/Mi Proyecto/base de datos/API Proyecto/tupresupuesto.db'
+    url_base_de_datos = 'tupresupuesto.db'
 
     def _crear_conexion(self):
         try:

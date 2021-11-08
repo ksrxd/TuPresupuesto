@@ -1,5 +1,3 @@
-import json
-from flask import jsonify
 import requests
 
 from web.servicios import rest_api
