@@ -27,3 +27,13 @@ def obtener_movimiento_tipomovimientoingreso():
 def obtener_movimiento_tipomovimientogasto():
     respuestatipomovigasto = requests.get(f'{rest_api.API_URL}/movimientos/Gasto')
     return respuestatipomovigasto.json()
+
+# obtener el monto total de los movimientos
+
+def obtener_total_gastos():
+    respuestatotalgastos = requests.get(f'{rest_api.API_URL}/movimientos/montogastos')
+    return respuestatotalgastos.json()
+
+def obtener_total_ingresos():
+    respuestatotalingresos = requests.get(f'{rest_api.API_URL}/movimientos/montoingresos')
+    return respuestatotalingresos.json()

@@ -104,6 +104,17 @@ def obtener_movimientos():
 def obtener_movimientos_por_tipo(TipoMovimiento):
     return jsonify(movimientos.obtener_movimiento_tipomovimento(TipoMovimiento))
 
+# obtener monto total gastos
+
+@app.route('/movimientos/montogastos', methods=['GET'])
+def obtener_montogastos():
+    return jsonify(movimientos.obtener_montostotal_gastos())
+
+#obtener monto total ingresos
+@app.route('/movimientos/montoingresos', methods=['GET'])
+def obtener_montoingresos():
+    return jsonify(movimientos.obtener_montostotal_ingresos())
+
 if __name__ == '__main__':
     app.debug = True
     app.run(port=5001)

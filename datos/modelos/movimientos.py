@@ -73,3 +73,26 @@ def obtener_movimientos():
              "Categoria": registro[4],
              "Monto": registro[5]
              } for registro in bd.ejecutar_sql(obtener_movimientos_sql)]
+
+# obtener todos los montos
+
+def obtener_montototal_gasto():
+    obtener_montototal_gasto_sql = f"""
+        SELECT SUM(Monto)
+        FROM Movimientos
+        WHERE TipoMovimiento = 'Gasto'
+    """
+    bd = BaseDeDatos()
+    return [{"Gastos totales": registro[0]}
+            for registro in bd.ejecutar_sql(obtener_montototal_gasto_sql)]
+
+def obtener_montototal_ingreso():
+    obtener_montototal_ingreso_sql = f"""
+        SELECT SUM(Monto)
+        FROM Movimientos
+        WHERE TipoMovimiento = 'Ingreso'
+    """
+    bd = BaseDeDatos()
+    return [{"Ingresos totales": registro[0]}
+            for registro in bd.ejecutar_sql(obtener_montototal_ingreso_sql)]
+

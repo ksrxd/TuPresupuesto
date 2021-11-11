@@ -66,6 +66,11 @@ def obtener_moviportipogasto():
     obtenermoviportipogasto = movimientos.obtener_movimiento_tipomovimientogasto()
     return render_template('ver_movimientos.html', movimientos = obtenermoviportipogasto)
 
+# mostrar montos totales
+@app.route('/inicio', methods=['GET', 'POST'])
+def obtener_montototalingresos():
+    obtenermontototalingresos = movimientos.obtener_total_ingresos()
+    return render_template('inicio.html', ingresos = obtenermontototalingresos)
 
 if __name__ == '__main__':
     app.debug = True

@@ -26,4 +26,12 @@ def obtener_movimientos():
 def obtener_movimiento_tipomovimento(TipoMovimiento):
     return modelo_movimientos.obtener_movimientos_por_tipo(TipoMovimiento)
 
+# obtener total de gastos
+
+def obtener_montostotal_gastos():
+    return modelo_movimientos.obtener_montototal_gasto()
+# obtener total ingresos
+
+def obtener_montostotal_ingresos():
+    return modelo_movimientos.obtener_montototal_ingreso()
 
