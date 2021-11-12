@@ -1,5 +1,5 @@
- let url3 = 'http://127.0.0.1:5001/movimientos/Gasto'
-        fetch(url3)
+ let urltablagastos = 'http://127.0.0.1:5001/movimientos/Gasto'
+        fetch(urltablagastos)
             .then(response => response.json())
             .then(data => mostrarData3(data))
             .catch(error => console.log(error))

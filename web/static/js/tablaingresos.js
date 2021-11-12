@@ -1,6 +1,6 @@
 
- let url2 = 'http://127.0.0.1:5001/movimientos/Ingreso'
-        fetch(url2)
+ let urltablaingresos = 'http://127.0.0.1:5001/movimientos/Ingreso'
+        fetch(urltablaingresos)
             .then(response => response.json())
             .then(data => mostrar2Data(data))
             .catch(error => console.log(error))

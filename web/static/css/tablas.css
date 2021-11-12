@@ -7,12 +7,10 @@ th {
     background: #f1f1f1;
     font-weight: bold;
     padding: 6px;
-    padding-right: 10%;
 }
 td {
     background: #f9f9f9;
-    padding: 6px;
-    padding-right: 10%;
+
 }
 .tablaingresos {
     float: right;
@@ -20,9 +18,40 @@ td {
     position: right;
 }
 .tablagastos{
-    display:table;
     float: right;
     width: 70%;
     position: right;
+    padding-top: 10%;
+}
+
+.tablaA {
+  float:left;
+  width: flex;
+  margin: flex;
+  padding: flex;
+  background-color: #673ab7;
+}
+
+.tablaB {
+  float:left;
+  width: flex;
+  margin: flex;
+  padding: flex;
+  background-color: #673ab7;
+}
+
+.tablaC {
+  float:left;
+  width: flex;
+  margin: flex;
+  padding: flex;
+  background-color: #673ab7;
+}
+
+.titulostablas {
+    float: right;
+    width: 70%;
+    color: white;
+    font-size: 20px;
 }
 
