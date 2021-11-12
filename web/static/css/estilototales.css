@@ -1,4 +1,7 @@
-h2 {
-float:center;
-background-color:#673ab7}
+.textomontoinicio {
+    float: right;
+    width: 70%;
+    color: white;
+    font-size: 20px;
+}
 

@@ -99,7 +99,7 @@ def modificar_movimientos(Id):
 def obtener_movimientos():
     return jsonify(movimientos.obtener_movimientos())
 
-#obtener movimientos por categoria ####
+#obtener movimientos por tipo ####
 @app.route('/movimientos/<TipoMovimiento>', methods=['GET'])
 def obtener_movimientos_por_tipo(TipoMovimiento):
     return jsonify(movimientos.obtener_movimiento_tipomovimento(TipoMovimiento))
