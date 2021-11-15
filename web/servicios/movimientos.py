@@ -37,3 +37,8 @@ def obtener_total_gastos():
 def obtener_total_ingresos():
     respuestatotalingresos = requests.get(f'{rest_api.API_URL}/movimientos/montoingresos')
     return respuestatotalingresos.json()
+
+# borrar movimientos
+
+def borrar_movimiento(Id):
+    requests.delete(f'{rest_api.API_URL}/movimientos/Id')

@@ -51,7 +51,20 @@ def ingresar_movimientos():
             error = 'No se pudo registar el movimiento'
         else:
             return redirect(url_for('ingresar_movimientos'))
+    if request.method == 'GET':
+        tmovimientos = movimientos.obtener_movimientos()
+        return render_template('movimientos.html', movimientos=tmovimientos)
     return render_template('movimientos.html', error = error)
+
+@app.route('/movimientos/<Id>')
+def borrar_movimiento(Id):
+    bmovimientos = movimientos.borrar_movimiento(Id)
+    return render_template('movimientos.html', movimientos = bmovimientos)
+# tablas en movimientos.html
+@app.route('/movimientos', methods=['GET'])
+def tablas_movimientos():
+    tmovimientos = movimientos.obtener_movimientos()
+    return render_template('movimientos.html', tmovimientos = tmovimientos)
 
 @app.route('/ver_movimientos', methods=['GET', 'POST'])
 def ver_movimientos():
@@ -71,6 +84,7 @@ def obtener_moviportipogasto():
 def obtener_montototalingresos():
     obtenermontototalingresos = movimientos.obtener_total_ingresos()
     return render_template('inicio.html', ingresos = obtenermontototalingresos)
+
 
 if __name__ == '__main__':
     app.debug = True
