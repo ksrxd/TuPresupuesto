@@ -41,4 +41,4 @@ def obtener_total_ingresos():
 # borrar movimientos
 
 def borrar_movimiento(Id):
-    requests.delete(f'{rest_api.API_URL}/movimientos/Id')
+    requests.delete(f'{rest_api.API_URL}/movimientos/{Id}')
