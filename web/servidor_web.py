@@ -59,8 +59,8 @@ def ingresar_movimientos():
 @app.route('/movimientos/<Id>')
 def borrar_movimiento(Id):
     bmovimientos = movimientos.borrar_movimiento(Id)
-    movimientos = movimientos.obtener_movimientos()
-    return render_template('movimientos.html', movimientos = movimientos)
+    _movimientos = movimientos.obtener_movimientos()
+    return redirect(url_for('ingresar_movimientos'))
 # tablas en movimientos.html
 @app.route('/movimientos', methods=['GET'])
 def tablas_movimientos():
