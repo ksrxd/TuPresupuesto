@@ -47,7 +47,7 @@ def acercade():
 def ingresar_movimientos():
     error = None
     if request.method == 'POST':
-        if not movimientos.ingresar_movimientos(request.form['Fecha'], request.form['TipoMovimiento'], request.form['Concepto'], request.form['Categoria'], request.form['Monto']):
+        if not movimientos.ingresar_movimientos(request.form['Fecha'], request.form['TipoMovimiento'],request.form['Concepto'], request.form['Categoria'],  request.form['Monto']):
             error = 'No se pudo registar el movimiento'
         else:
             return redirect(url_for('ingresar_movimientos'))
