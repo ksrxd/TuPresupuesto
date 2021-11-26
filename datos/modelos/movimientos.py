@@ -96,3 +96,4 @@ def obtener_montototal_ingreso():
     return [{"Ingresos totales": registro[0]}
             for registro in bd.ejecutar_sql(obtener_montototal_ingreso_sql)]
 
+

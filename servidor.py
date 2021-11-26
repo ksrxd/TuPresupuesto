@@ -115,6 +115,7 @@ def obtener_montogastos():
 def obtener_montoingresos():
     return jsonify(movimientos.obtener_montostotal_ingresos())
 
+
 if __name__ == '__main__':
     app.debug = True
     app.run(port=5001)

@@ -14,3 +14,4 @@ fetch('http://127.0.0.1:5001/movimientos/montogastos')
       document.getElementById('gastostotales2').innerHTML = totalgastos[0]["Gastos totales"]
       console.log(totalgastos)})
 
+

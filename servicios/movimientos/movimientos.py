@@ -35,3 +35,4 @@ def obtener_montostotal_gastos():
 def obtener_montostotal_ingresos():
     return modelo_movimientos.obtener_montototal_ingreso()
 
+

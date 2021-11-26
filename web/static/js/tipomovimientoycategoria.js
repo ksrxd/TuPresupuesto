@@ -1,6 +1,6 @@
 
 var categorias_1 = new Array("Selecciona la categoria", "Salario", "Remuneracion extra", "Ventas", "Otros");
-var categorias_2 = new Array("Selecciona la categoria", "Alimentacion", "Transporte", "Vestimenta", "Entretenimiento", "Otros");
+var categorias_2 = new Array("Selecciona la categoria", "Alimentacion", "Transporte", "Vestimenta", "Entretenimiento", "Gastos fijos", "Otros");
 
 var todasCategorias = [
   [],
